@@ -9,16 +9,24 @@ nltk.download("punkt")
 nltk.download("averaged_perceptron_tagger")
 nltk.download("wordnet")
 
-def chat_bot():
+question_reponse = [
+        [ 
+            r"(.*)date limite(.*)",
+           [ "date limite d inscription est le 30/09"]
+        ],
+        [
+            r"(.*)frais(.*)",
+            ["les frais d'inscription pour la formation sont de 190 euros"]
+        ],
+        [
+            "r(.*)documents(.*)",
+            ["les documents necessaires sont une copie de votre piece d'identité, relevé de note de l'année precedente et notification bourse si vous etes boursier"],
+        ]
+        ]
+def chat_bot(question_reponse):
     """
     fonction qui definit le chatbot
     """
-    question_reponse = [
-            [
-                r"(.*) date limite (.*)",
-                ["la date limite d'inscription pour les etudiants en informatique est le 31/09"],
-                ]
-            ]
     chatbot = Chat(question_reponse, reflections)
     print("Bonjour ! Comment puis-je vous aider avec les inscriptions ?")
     while True:
@@ -29,4 +37,4 @@ def chat_bot():
         response = chatbot.respond(user_input)
         print(response)
 if __name__ == "__main__":
-    chat_bot()
+    chat_bot(question_reponse)
