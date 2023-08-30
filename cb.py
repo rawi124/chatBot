@@ -3,7 +3,7 @@
 un simple chatBot d'Assistances aux inscriptions universitaires
 """
 import nltk
-from nltk.chat import Chat, reflections
+from nltk.chat.util import Chat, reflections
 nltk.download("punkt")
 nltk.download("averaged_perceptron_tagger")
 nltk.download("wordnet")
@@ -17,10 +17,10 @@ question_reponse = [
             ["les frais d'inscription pour la formation sont de 190 euros"]
         ],
         [
-            "r(.*)documents(.*)",
-            ["les documents necessaires sont une copie de",
-            "votre piece d'identité, relevé de note de l'année precedente ",
-            "et notification bourse si vous etes boursier"],
+            r"(.*)documents(.*)",
+            ["les documents necessaires sont une copie de"
+            +"votre piece d'identité, relevé de note de l'année precedente "
+           + "et notification bourse si vous etes boursier"],
         ]
         ]
 def chat_bot():
