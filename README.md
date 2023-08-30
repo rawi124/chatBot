@@ -23,6 +23,6 @@ Ce projet consiste en un simple chatbot qui fournit des réponses aux questions 
 
 ## Exemple de questions
 
-- Quelles sont les dates limites d'inscription ?
+- Quelle date limite pour mon inscription ?
 - Quels sont les frais d'inscription pour la formation ?
 - Quels documents sont nécessaires pour l'inscription ?
