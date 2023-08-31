@@ -26,3 +26,17 @@ Ce projet consiste en un simple chatbot qui fournit des réponses aux questions 
 - Quelle date limite pour mon inscription ?
 - Quels sont les frais d'inscription pour la formation ?
 - Quels documents sont nécessaires pour l'inscription ?
+
+## Utilisation de Docker
+
+Si vous souhaitez exécuter le chatbot dans un environnement Docker, suivez ces étapes :
+
+1. Assurez-vous d'avoir Docker installé sur votre système.
+
+2. Clonez ce dépôt : git clone https://github.com/rawi124/chatBot et se placer dans le repertoire 
+3. docker build -t chatbot .
+4. docker run -it chatbot
+5. Vous devriez maintenant voir le chatbot en cours d'exécution dans le conteneur Docker.
+
+
+
