@@ -29,7 +29,7 @@ question_reponse = [
     [
         r"(.*)documents(.*)",
         ["les documents necessaires sont une copie de"
-         + "votre piece d'identité, relevé de note de l'année precedente "
+         + " votre piece d identite, releve de note de l annee precedente "
          + "et notification bourse si vous etes boursier"],
     ]
 ]
@@ -41,6 +41,7 @@ def chat_bot():
     """
     chatbot = Chat(question_reponse, reflections)
     print("Bonjour ! Comment puis-je vous aider avec votre inscription ?")
+    reponse = None
     while True:
         try:
             entree = input(">>> ")
@@ -57,7 +58,8 @@ def chat_bot():
             print(reponse)
         except Exception as e:
             print(f"une erreur c'est produite : {e}")
-
+    return reponse
 
 if __name__ == "__main__":
-    chat_bot()
+    reponses = chat_bot()
+    
