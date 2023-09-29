@@ -56,10 +56,10 @@ def chat_bot():
                 raise ExpressionInvalide(
                     "désolé je ne comprend pas votre demande")
             print(reponse)
-        except Exception as e:
-            print(f"une erreur c'est produite : {e}")
+        except Exception as err :
+            print(f"une erreur c'est produite : {err}")
     return reponse
+
 
 if __name__ == "__main__":
     reponses = chat_bot()
-    
